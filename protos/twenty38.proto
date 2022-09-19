@@ -1,0 +1,14 @@
+syntax = "proto3";
+package twenty38;
+
+service Twenty38 {
+    rpc stats (StatsRequest) returns (StatsResponse);
+}
+
+message StatsRequest {
+  repeated string stats = 1;
+}
+
+message StatsResponse {
+    map<string, double> stats = 1;
+}
